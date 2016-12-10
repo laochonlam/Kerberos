@@ -4,10 +4,9 @@ var router = express.Router();
 
 
 /* GET home page. */
-router.get('/fucku', function(req, res, next){
-	res.sendFile(path.join(__dirname, '../view', 'index.html'));
+router.get('/', function(req, res, next) {
+    res.sendFile(path.join(__dirname, '../view', 'index.html'));
 });
-
 
 
 
