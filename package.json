@@ -3,7 +3,8 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "node ./bin/www"
+        "AS": "node ./AS/bin/www",
+        "TGS": "node ./TGS/bin/www"
     },
     "dependencies": {
         "express": "^4.14.0"
