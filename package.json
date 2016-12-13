@@ -1,12 +1,14 @@
 {
-    "name": "kerberos",
-    "version": "0.0.0",
-    "private": true,
-    "scripts": {
-        "KDC": "node ./KDC/bin/www",
-        "WS": "node ./WS/bin/www"
-    },
-    "dependencies": {
-        "express": "^4.14.0"
-    }
+  "name": "kerberos",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "KDC": "node ./node_modules/nodemon/bin/nodemon.js ./KDC/bin/www",
+    "WS": "node ./node_modules/nodemon/bin/nodemon.js ./WS/bin/www"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0",
+    "superagent": "^3.2.1"
+  }
 }

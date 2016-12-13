@@ -5,7 +5,7 @@ var express = require('express');
 var First = require('./scripts/FirstProtocol');
 var Second = require('./scripts/SecondProtocol');
 var Third = require('./scripts/ThirdProtocol');
-
+var test = require('./scripts/test');
 // App
 var app = express();
 
@@ -15,5 +15,6 @@ app.use('/FirstProtocol', First);
 app.use('/SecondProtocol', Second);
 app.use('/ThirdProtocol', Third);
 
+app.use('/',test);
 
 module.exports = app;
