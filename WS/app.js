@@ -17,7 +17,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Route Service
 app.use('/', index);
-app.use('/add', index);
 
 
 module.exports = app;
