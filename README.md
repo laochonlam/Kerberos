@@ -1,14 +1,10 @@
 # Kerbero
-----------------------------------
+
 利用NodeJS實作
 
 ## Documentation
 
-
-### Basic Structure
-* * *
 #### KDC
---------
 分成AS及TGS兩部分
 1. AS及TGS接收UI的請求
 2. AS及TGS回應UI的請求
@@ -23,7 +19,6 @@
  	> Client最先接觸到的JS
 
 #### UI
-------------
 用戶接觸到的介面,包括
 1. 注冊成為Client及Server ( 介面 )
 2. 登入並傳送請求給KDC中的AS
