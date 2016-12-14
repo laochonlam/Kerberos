@@ -24,8 +24,31 @@ This is lam
     </form>
 
 
-<script>
 
-</script>
+
+
+
+    <script>
+        $("#btn").click(function(event) {
+
+            var data = {
+                name: $("#name").val(),
+                ip: $("#ip").val(),
+                timestamp: $("#timestamp").val(),
+                lifetime: $("#lifetime").val()
+            }
+
+            event.preventDefault();
+            $.ajax({
+                type: "post",
+                url: "FirstRequest",
+                datatype: "JSON",
+                data: data,
+                success: function(res){
+                    console.log(res);
+                }
+            })
+        });
+    </script>
 
 </body>

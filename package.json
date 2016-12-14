@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "KDC": "node ./node_modules/nodemon/bin/nodemon.js ./KDC/bin/www",
-    "WS": "node ./node_modules/nodemon/bin/nodemon.js ./WS/bin/www"
+    "UI": "node ./node_modules/nodemon/bin/nodemon.js ./UI/bin/www"
   },
   "dependencies": {
     "express": "^4.14.0",

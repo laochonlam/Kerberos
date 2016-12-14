@@ -8,7 +8,7 @@ var querystring = require('querystring');
 /* GET home page. */
 router.post('/', function(req, res, next) {
 
-  var para = querystring.parse(req);
+  var para = querystring.parse(req.query);
   console.log(req.query);
     res.send("here.");
 });
