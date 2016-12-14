@@ -6,7 +6,7 @@
 
 ### KDC
 分成AS及TGS兩部分
-<br><br>
+<br>
  1. AS及TGS接收UI的請求
  2. AS及TGS回應UI的請求
 
@@ -22,9 +22,12 @@
  * app.js
  	> Client最先接觸到的JS
 
+
+<br><br>
+
 ### UI
 用戶接觸到的介面,包括
-<br><br>
+<br>
  1. 注冊成為Client及Server ( 介面 )
  2. 登入並傳送請求給KDC中的AS
  3. Services Servers的列表 ( 介面 )
