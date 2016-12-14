@@ -1,13 +1,19 @@
 var express = require('express');
 var path = require('path');
 var router = express.Router();
+var querystring = require('querystring');
+var crypto = require('../crypto/crypto');
+
+router.post('/FirstRequest', function(req, res, next) {
+
+    var para = JSON.stringify(req.query);
+
+    console.log(para);
+    console.log(crypto.encrypt(para,"qwertyui"));
 
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    res.send("AS here.");
+    res.send("here.");
 });
-
 
 
 module.exports = router;

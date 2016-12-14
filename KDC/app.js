@@ -2,19 +2,14 @@
 var express = require('express');
 
 // Routes
-// var First = require('./scripts/FirstProtocol');
-// var Second = require('./scripts/SecondProtocol');
-// var Third = require('./scripts/ThirdProtocol');
-var test = require('./routes/test');
+var AS = require('./routes/AS');
+var TGS = require('./routes/TGS');
+
 // App
 var app = express();
 
 
 // Route Service
-// app.use('/FirstProtocol', First);
-// app.use('/SecondProtocol', Second);
-// app.use('/ThirdProtocol', Third);
-
-app.use('/', test);
+app.use('/AS', AS);
 
 module.exports = app;

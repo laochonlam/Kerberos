@@ -29,7 +29,7 @@ router.post('/FirstRequest', function(req, res) {
         var timestamp = para.timestamp;
         var liftetime = para.liftetime;
 
-        superagent.post('localhost:5001/')
+        superagent.post('localhost:5001/AS/FirstRequest')
             .set('Content-Type', 'application/json')
             .query(body)
             .end(function(err, res) {
