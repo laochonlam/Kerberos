@@ -4,13 +4,13 @@
 
 ## Documentation
 
-#### KDC
+### KDC
 分成AS及TGS兩部分
 <br><br>
  1. AS及TGS接收UI的請求
  2. AS及TGS回應UI的請求
 
-##### 文件架構
+#### File Structure
 
 
  * bin
@@ -22,7 +22,7 @@
  * app.js
  	> Client最先接觸到的JS
 
-#### UI
+### UI
 用戶接觸到的介面,包括
 <br><br>
  1. 注冊成為Client及Server ( 介面 )
@@ -31,7 +31,7 @@
  4. 選取需要的Services Server並發送請求
  5. ...還沒想
 
-##### 文件架構
+#### File Structure
 
  * bin
 	> 建立伺服器 (5002)
