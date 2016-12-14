@@ -6,8 +6,10 @@
 
 #### KDC
 分成AS及TGS兩部分
-1. AS及TGS接收UI的請求
-2. AS及TGS回應UI的請求
+
+ 1. AS及TGS接收UI的請求
+ 2. AS及TGS回應UI的請求
+
 <br><br><br>
  * bin
 	> 建立伺服器 (5001)
@@ -20,11 +22,13 @@
 
 #### UI
 用戶接觸到的介面,包括
-1. 注冊成為Client及Server ( 介面 )
-2. 登入並傳送請求給KDC中的AS
-3. Services Servers的列表 ( 介面 )
-4. 選取需要的Services Server並發送請求
-5. ...還沒想
+
+ 1. 注冊成為Client及Server ( 介面 )
+ 2. 登入並傳送請求給KDC中的AS
+ 3. Services Servers的列表 ( 介面 )
+ 4. 選取需要的Services Server並發送請求
+ 5. ...還沒想
+
 <br><br><br>
  * bin
 	> 建立伺服器 (5002)
