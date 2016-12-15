@@ -4,6 +4,8 @@ var router = express.Router();
 var superagent = require('superagent');
 var querystring = require('querystring');
 
+var date = new Date();
+
 
 
 /* GET home page. */
@@ -26,8 +28,8 @@ router.post('/FirstRequest', function(req, res) {
 
         var name = para.name;
         var ip = para.ip;
-        var timestamp = para.timestamp;
-        var liftetime = para.liftetime;
+        var timeStamp = date;
+        var lifeTime = para.lifeTime;
 
         superagent.post('localhost:5001/AS/FirstRequest')
             .set('Content-Type', 'application/json')
