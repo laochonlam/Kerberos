@@ -35,6 +35,8 @@ router.post('/FirstRequest', function(req, res) {
             .set('Content-Type', 'application/json')
             .query(body)
             .end(function(err, res) {
+              console.log(res.body);
+
             })
 
 
