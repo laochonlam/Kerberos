@@ -3,6 +3,7 @@ var path = require('path');
 var router = express.Router();
 var superagent = require('superagent');
 var querystring = require('querystring');
+var request = require('request');
 
 var date = new Date();
 
@@ -15,6 +16,8 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/FirstRequest', function(req, res) {
+
+    var a;
 
 
     var body = '';
@@ -30,14 +33,26 @@ router.post('/FirstRequest', function(req, res) {
         var ip = para.ip;
         var timeStamp = date;
         var lifeTime = para.lifeTime;
-
+        //
         superagent.post('localhost:5001/AS/FirstRequest')
             .set('Content-Type', 'application/json')
             .query(body)
-            .end(function(err, res) {
-              console.log(res.body);
+            .end(function(err,ress) {
+                console.log(ress.body);
+                res.send(ress.body);
+            });
+        //console.log(body);
+    //   var fucky = {};
+    //   request({
+    //   uri: "localhost:5001/AS/FirstRequest",
+    //   method: "POST",
+    //   timeout: 10000,
+    //
+    // }, function(error, response, body) {
+    //   console.log(body);
+    // });
 
-            })
+
 
 
     })
@@ -46,5 +61,12 @@ router.post('/FirstRequest', function(req, res) {
 
 })
 
-
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds) {
+            break;
+        }
+    }
+}
 module.exports = router;
