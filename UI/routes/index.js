@@ -7,8 +7,6 @@ var request = require('request');
 
 var date = new Date();
 
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
     console.log("[GET] /");
@@ -29,7 +27,6 @@ router.post('/FirstRequest', function(req, res) {
 
         var para = querystring.parse(body);
 
-
         var name = para.name;
         var ip = para.ip;
         var timeStamp = date;
@@ -38,9 +35,9 @@ router.post('/FirstRequest', function(req, res) {
         superagent.post('localhost:5001/AS/FirstRequest')
             .set('Content-Type', 'application/json')
             .query(body)
-            .end(function(err, ress) {
-                console.log(ress.body);
-                res.send(ress.body);
+            .end(function(err, resback) {
+                console.log(resback.body);
+                res.send(resback.body);
             });
     })
 })

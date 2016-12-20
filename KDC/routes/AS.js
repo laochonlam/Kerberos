@@ -47,6 +47,7 @@ router.post('/FirstRequest', function(req, res, next) {
     date = req.query.timeStamp;
     ip = req.query.ip;
 
+
     /*******************************/
     var TGTResponse = {
             "tgsName": tgsName,
@@ -76,9 +77,9 @@ router.post('/FirstRequest', function(req, res, next) {
     var FirstResponse = {
         "TGTResponse": TGTResponse_encrypt,
         "TicketGrantingTicket": TicketGrantingTicket_encrypt
-
-
     }
+    console.log("[SEND BACK]FirstResponse");
+
     res.send(FirstResponse);
 });
 

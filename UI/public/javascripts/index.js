@@ -35,8 +35,9 @@ $("#btn").click(function(event) {
         datatype: "JSON",
         data: data,
         success: function(res) {
+            var ClientKey = $("#ClientKey").val();
             console.log("[RECEIVE FROM BACKEND] FirstResponse");
-            console.log(decrypt(res.TGTResponse,"ClientKey"));
+            console.log(decrypt(res.TGTResponse,ClientKey));
         }
     })
 });
