@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "KDC": "node ./node_modules/nodemon/bin/nodemon.js ./KDC/bin/www",
-    "UI": "node ./node_modules/nodemon/bin/nodemon.js ./UI/bin/www",
-    "build" : "node ./node_modules/browserify/bin/cmd.js ./UI/public/javascripts/index.js > ./UI/public/javascripts/crypto.js"
+    "UI_pre": "node ./node_modules/nodemon/bin/nodemon.js ./UI/bin/www",
+    "browserify" : "node ./node_modules/browserify/bin/cmd.js ./UI/public/javascripts/index.js > ./UI/public/javascripts/crypto.js",
+    "UI" : "npm run browserify && npm run UI_pre"
   },
   "dependencies": {
     "crypto": "0.0.3",

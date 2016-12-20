@@ -11,6 +11,7 @@ var date = new Date();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+    console.log("[GET] /");
     res.sendFile(path.join(__dirname, '../view', 'index.html'));
 });
 
@@ -19,7 +20,7 @@ router.post('/FirstRequest', function(req, res) {
 
     var a;
 
-
+    console.log("[POST] /FirstRequest");
     var body = '';
     req.on('data', function(data) {
         body += data;
@@ -37,36 +38,11 @@ router.post('/FirstRequest', function(req, res) {
         superagent.post('localhost:5001/AS/FirstRequest')
             .set('Content-Type', 'application/json')
             .query(body)
-            .end(function(err,ress) {
+            .end(function(err, ress) {
                 console.log(ress.body);
                 res.send(ress.body);
             });
-        //console.log(body);
-    //   var fucky = {};
-    //   request({
-    //   uri: "localhost:5001/AS/FirstRequest",
-    //   method: "POST",
-    //   timeout: 10000,
-    //
-    // }, function(error, response, body) {
-    //   console.log(body);
-    // });
-
-
-
-
     })
-
-
-
 })
 
-function sleep(milliseconds) {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e7; i++) {
-        if ((new Date().getTime() - start) > milliseconds) {
-            break;
-        }
-    }
-}
 module.exports = router;

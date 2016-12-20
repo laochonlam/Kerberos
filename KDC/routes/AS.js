@@ -35,6 +35,8 @@ var lifeTime;
 
 router.post('/FirstRequest', function(req, res, next) {
 
+    console.log("[POST] /FirstRequest");
+
     var para = JSON.stringify(req.query);
 
     console.log(para);

@@ -20,7 +20,7 @@ function decrypt(text,password){
 
 
 $("#btn").click(function(event) {
-
+    console.log("[SEND TO BACKEND] FirstRequest");
     var data = {
         name: $("#name").val(),
         ip: $("#ip").val(),
@@ -35,6 +35,7 @@ $("#btn").click(function(event) {
         datatype: "JSON",
         data: data,
         success: function(res) {
+            console.log("[RECEIVE FROM BACKEND] FirstResponse");
             console.log(decrypt(res.TGTResponse,"ClientKey"));
         }
     })
