@@ -3,13 +3,14 @@ var path = require('path');
 var router = express.Router();
 var querystring = require('querystring');
 var crypto = require('../crypto/crypto');
+var randomstring = require('randomstring');
 
 
-var tgsSessionKey = "randomkey";
+
 var tgsName = "MyTGS";
 var ClientKey = "ClientKey";
 var ServerKey = "ServerKey";
-
+var tgtSessionKey;
 /****************************/
 //tgsName
 var lifeTime;
@@ -41,6 +42,7 @@ router.post('/FirstRequest', function(req, res, next) {
 
     console.log(para);
 
+    tgsSessionKey = randomstring.generate();
 
     ClientName = req.query.name;
     lifeTime = req.query.lifeTime;

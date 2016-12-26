@@ -39,6 +39,33 @@ $("#btn").click(function(event) {
             var ClientKey = $("#ClientKey").val();
             console.log("[RECEIVE FROM BACKEND] FirstResponse");
             console.log(decrypt(res.TGTResponse,ClientKey));
+
+            var TGTResponse_decrypt = JSON.parse(decrypt(res.TGTResponse,ClientKey));
+
+
+            var Verification = {
+              "name" : $("#name").val(),
+              "timeStamp" : TGTResponse_decrypt.timeStamp
+            }
+
+            console.log(TGTResponse_decrypt.timeStamp );
+            var Verification_encrypt = encrypt(Verification,TGTResponse_decrypt.tgsSessionKey);
+            var RequestInformation = {
+              requestServerName : " ",
+              ip : " ",
+              lifeTime : " "
+            }
+            var tgt = "  ";
+
+            var SecondRequest = {
+              "verification" : Verification,
+              "requestInformation" : RequestInformation,
+              "tgt" : tgt
+            }
+
+
+
+
         }
     })
 });
