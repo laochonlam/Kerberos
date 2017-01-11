@@ -48,7 +48,7 @@ $("#btn").click(function(event) {
               "timeStamp" : TGTResponse_decrypt.timeStamp
             }
 
-            console.log(TGTResponse_decrypt.timeStamp );
+
             var Verification_encrypt = encrypt(Verification,TGTResponse_decrypt.tgsSessionKey);
             var RequestInformation = {
               requestServerName : " ",
@@ -63,7 +63,7 @@ $("#btn").click(function(event) {
               "tgt" : tgt
             }
 
-
+            console.log();
 
 
         }
@@ -14843,7 +14843,7 @@ module.exports={
         "spec": ">=6.0.0 <7.0.0",
         "type": "range"
       },
-      "D:\\Kerberos\\node_modules\\browserify-sign"
+      "D:\\Github\\Kerberos\\node_modules\\browserify-sign"
     ]
   ],
   "_from": "elliptic@>=6.0.0 <7.0.0",
@@ -14878,7 +14878,7 @@ module.exports={
   "_shasum": "e4c81e0829cf0a65ab70e998b8232723b5c1bc48",
   "_shrinkwrap": null,
   "_spec": "elliptic@^6.0.0",
-  "_where": "D:\\Kerberos\\node_modules\\browserify-sign",
+  "_where": "D:\\Github\\Kerberos\\node_modules\\browserify-sign",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"

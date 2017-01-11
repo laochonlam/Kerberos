@@ -47,7 +47,7 @@ $("#btn").click(function(event) {
               "timeStamp" : TGTResponse_decrypt.timeStamp
             }
 
-            console.log(TGTResponse_decrypt.timeStamp );
+
             var Verification_encrypt = encrypt(Verification,TGTResponse_decrypt.tgsSessionKey);
             var RequestInformation = {
               requestServerName : " ",
@@ -62,7 +62,7 @@ $("#btn").click(function(event) {
               "tgt" : tgt
             }
 
-
+            console.log();
 
 
         }
