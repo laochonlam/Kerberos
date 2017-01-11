@@ -13,6 +13,11 @@ router.get('/', function(req, res, next) {
     res.sendFile(path.join(__dirname, '../view', 'index.html'));
 });
 
+router.get('/login', function(req,res){
+  console.log("[GET] /login");
+  res.sendFile(path.join(__dirname, '../view', 'login.html'));
+})
+
 
 router.post('/FirstRequest', function(req, res) {
 

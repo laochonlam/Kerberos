@@ -37,33 +37,36 @@ $("#btn").click(function(event) {
         success: function(res) {
             var ClientKey = $("#ClientKey").val();
             console.log("[RECEIVE FROM BACKEND] FirstResponse");
+            console.log(res.TGTResponse);
             console.log(decrypt(res.TGTResponse,ClientKey));
 
-            var TGTResponse_decrypt = JSON.parse(decrypt(res.TGTResponse,ClientKey));
-
-
-            var Verification = {
-              "name" : $("#name").val(),
-              "timeStamp" : TGTResponse_decrypt.timeStamp
-            }
-
-
-            var Verification_encrypt = encrypt(Verification,TGTResponse_decrypt.tgsSessionKey);
-            var RequestInformation = {
-              requestServerName : " ",
-              ip : " ",
-              lifeTime : " "
-            }
-            var tgt = "  ";
-
-            var SecondRequest = {
-              "verification" : Verification,
-              "requestInformation" : RequestInformation,
-              "tgt" : tgt
-            }
-
-            console.log();
-
+            //  console.log(decrypt(JSON.stringify(res.TGTResponse),ClientKey));
+            //
+            // var TGTesponse_decrypt = decrypt(JSON.stringify(res.TGTResponse),ClientKey);
+            //
+            //
+            // var Verification = {
+            //   "name" : $("#name").val(),
+            //   "timeStamp" : TGTResponse_decrypt.timeStamp
+            // }
+            //
+            //
+            // var Verification_encrypt = encrypt(Verification,TGTResponse_decrypt.tgsSessionKey);
+            // var RequestInformation = {
+            //   requestServerName : " ",
+            //   ip : " ",
+            //   lifeTime : " "
+            // }
+            // var tgt = "  ";
+            //
+            // var SecondRequest = {
+            //   "verification" : Verification,
+            //   "requestInformation" : RequestInformation,
+            //   "tgt" : tgt
+            // }
+            //
+            // console.log();
+            //
 
         }
     })
